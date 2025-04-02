@@ -18,7 +18,7 @@ end
 
 local teams = Spring.GetTeamList()
 local scavTeamID = Spring.Utilities.GetScavTeamID()
-
+local scavAllyTeamID = select(6, Spring.GetTeamInfo(scavTeamID))
 local mapx = Game.mapSizeX
 local mapz = Game.mapSizeZ
 local cloudMult = math.ceil((math.ceil(((mapx+mapz)*0.5)/512)^2)/18)
